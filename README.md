@@ -28,7 +28,7 @@ To get started with the StarMax application, follow these steps:
 1. Clone the repository:
 
 ```shell
-git clone <repository-url>
+git clone git@github.com:glitchwizard/StarMax.git
 ```
 
 2. Navigate to the project directory:
