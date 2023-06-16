@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}\\StarMax_BackEnd\\StarMaxApp.csproj",
+                "\\property:GenerateFullPaths=True",
+                "\\consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}\\StarMax_BackEnd\\StarMaxApp.csproj",
+                "\\property:GenerateFullPaths=True",
+                "\\consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}\\StarMax_BackEnd\\StarMaxApp.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

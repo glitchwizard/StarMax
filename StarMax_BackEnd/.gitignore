@@ -1,0 +1,105 @@
+# .gitignore file for ASP.NET Core MVC
+
+# Binaries and Object files
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+**/bin
+**/obj
+*.rst
+*.user
+*.suo
+*.*proj.user
+*.*sln.user
+
+# Visual Studio config (remove if you want to share this)
+.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Roslyn cache directories
+*.ide/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# NuGet Packages Directory
+# NuGet v3's project.json files produces more ignorable files
+*.nuget.props
+*.nuget.targets
+
+# NuGet Packages
+*.nupkg
+# Ignore packages folder
+**/packages/*
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file to a newer
+# Visual Studio version. Backup files are not needed, because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Web deploy on Azure
+*.pubxml
+*.publishproj
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+
+# Azure Functions localsettings file
+local.settings.json
+
+# .Net Core specific - Ignore the "Properties\launchSettings.json" file, but make sure the "Properties\" folder IS tracked
+**/Properties/launchSettings.json
+
+# This one is Windows specific, you can remove it if not applicable
+Thumbs.db

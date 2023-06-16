@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./StarMax_BackEnd
+      dockerfile: Dockerfile.backend.dev
+    ports:
+      - '5000:80'
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=database;Database=StarMaxDB;User=sa;Password=12345;
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - '1433:1433'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=12345
+    volumes:
+      - ./database:/var/opt/mssql/data
+
+  frontend:
+    build:
+      context: ./StarMax_FrontEnd
+      dockerfile: Dockerfile.frontend.dev
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_BASE_URL=http://backend:5000
+
